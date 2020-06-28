@@ -12,6 +12,7 @@ class Router {
   addRouter(args) {
     let [path, handler, method] = args; //解构参数
     this.router.push({ path, method, handler });
+    console.log("this.router = ", this.router);
   }
   execute(req, res) {
     let path = url.parse(req.url).pathname;
